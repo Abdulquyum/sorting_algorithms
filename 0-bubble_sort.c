@@ -4,8 +4,8 @@
 /**
  * bubble_sort - using bubble sort algorithm to sort array
  *
- * array: Array to be sorted
- * size: size of array
+ * @array: Array to be sorted
+ * @size: size of array
  *
  * Return: Nothing
  */
