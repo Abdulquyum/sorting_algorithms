@@ -12,19 +12,24 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t n, idx;
-	int temp, swap;
+	int temp, swap, to_print;
 
 	for (n = 0; n < size; n++)
 	{
 		temp = n;
+		to_print = 0;
 		for (idx = n + 1; idx < size; idx++)
 		{
 			if (array[temp] > array[idx])
+			{
 				temp = idx;
+				to_print = 1;
+			}
 		}
 		swap = array[n];
 		array[n] = array[temp];
 		array[temp] = swap;
-		print_array(array, size);
+		if (to_print)
+			print_array(array, size);
 	}
 }
